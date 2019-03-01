@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Profile</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/app_style.css" rel="stylesheet">     
+	<script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<a href=".">
+			<img src="../images/back_arrow.png" alt="back" class="img" height="40" width="40">
+		</a>
+		<div class="text-center">
+			<h1>PROFILE</h1>
+		</div>
+		<form id="addTaskForm" role="form" method="get" action="/add_type">
+			<div class="form-group" id="add_task">
+				<input type="text" class="form-control" id="input_task" placeholder="Add new task..." name="input_task"/>
+			</div>
+				<input type="submit" class="btn btn-outline-secondary" id="put_task" value="Add"></input>
+		</form>
+		<ul class="list-group" id="task_list">
+			{{#each list}}
+				<li class="list-group-item">{{type}}
+				<div class="slidecontainer">
+  					<input type="range" min="1" max="5" value="1" class="slider" class="myRange">
+					<p>Importance: <span class="slider_value"></span></p>
+				</div>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+	<script>
+		var slider = $(".myRange");
+		var output = $(".slider_value");
+		output.html(slider.val());
+
+		slider.change( function() {
+ 	 		output.html($(this).val());
+		})
+</script>
+	<script src="js/profile_code.js"></script>
+</body>
+</html>

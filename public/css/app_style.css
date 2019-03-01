@@ -1,0 +1,99 @@
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+	margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
+	color: #CC00AA;
+}
+
+.container {
+     width: 70%;
+}
+
+.side_nav {
+     height: 100%;
+     width: 0;
+     position: fixed;
+     z-index: 1;
+     top: 0;
+     left: 0;
+     background-color: #111;
+     overflow-x: hidden;
+     transition: 0.5s;
+     padding-top: 60px;
+}
+   
+   .side_nav a {
+     padding: 8px 8px 8px 32px;
+     text-decoration: none;
+     font-size: 25px;
+     color: #818181;
+     display: block;
+     transition: 0.3s;
+}
+   
+   .side_nav a:hover {
+     color: #f1f1f1;
+}
+   
+   .side_nav .closebtn {
+     position: absolute;
+     top: 0;
+     right: 25px;
+     font-size: 36px;
+     margin-left: 50px;
+}
+   
+   @media screen and (max-height: 450px) {
+     .side_nav {padding-top: 15px;}
+     .side_nav a {font-size: 18px;}
+}
+
+#main_page_scale {
+     padding: 5px;
+}
+
+.options_text {
+     padding-top: 20px;
+}
+
+.stress_tips {
+     padding-top: 20px;
+}
+
+.back_title div {
+     display: inline-block;
+}
+
+.option_scale {
+     padding-top: 15px;
+     margin-top: 30px;
+     margin-left: 380px;
+     margin-right: 380px;
+}
+
+.options_help div {
+     display: inline-block;
+}
+
+.scale_pic {
+     margin-bottom:10px;
+}
+
+.stress_help div {
+     display: inline-block;
+}
+
+.password {
+     padding-top: 10px;
+}
+.submit {
+     padding-top: 15px;
+}
+
+.task {
+     float: left;
+}

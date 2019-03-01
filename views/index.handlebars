@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Home Screen</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/app_style.css" rel="stylesheet">
+
+	<script src="/js/home.js"></script>
+	      
+</head>
+
+<body>
+	<div class="container">
+		{{#each avatar}}
+			<div onclick="openNav()">
+				<img src="{{image}}" alt="Avatar" class="img" height="30" width="30">
+			</div>
+			<div class="top_title" align="center">
+				<div class="app_title">
+					<h1>THIS or THAT</h1>
+					<p>Helping YOU decide what to do</p>
+				</div>
+			</div>
+
+			<div id="{{id}}" class="{{class}}">
+  				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  				<a href="profile">Profile</a>
+  				<a href="history">History</a>
+				<a href="tips">Stress Relief Tips</a>  
+				<a href="login">Logout</a>
+			</div>
+		{{/each}}
+
+		<div class="text-center">
+			{{#each scale}}
+				<div class="{{class}}" id="{{id}}">
+						<div>
+							<img src="{{image}}" alt="Scale" class="img" id="main_page_scale" height="200" width="200">
+						</div>
+						<div class="options_text">
+							<button type="button" class="btn btn-primary"><a href="{{next}}">Weigh My Options</a></button>
+						</div>
+				</div>
+			{{/each}}
+
+	
+			<div class="stress_help">
+				<a href="help">
+					<img src="../images/question.png" alt="Help" class="img" height="25" width="25">
+				</a>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
