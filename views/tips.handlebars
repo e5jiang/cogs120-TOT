@@ -20,12 +20,40 @@
 
 <body>
 	<div class="container">
-		<a href=".">
-			<img src="../images/back_arrow.png" alt="back" class="img" height="40" width="40">
-		</a>
-		<div class="text-center">
-			<h1>Stress Relief Tips</h1>
-		</div>
+		{{#each avatar}}
+			<div onclick="openNav()">
+				<img src="{{image}}" alt="Avatar" class="img" height="30" width="30">
+			</div>
+			<div class="top_title" align="center">
+				<div class="app_title">
+					<h1>Stress Relief Tips</h1>
+					<p></p>
+				</div>
+			</div>
+
+			<div id="{{id}}" class="{{class}}">
+  				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					<a href=".">Home</a>
+  				<a href="profile">Profile</a>
+  				<a href="history">History</a>
+					<a href="tips">Stress Relief Tips</a>  
+					<a href="login">Logout</a>
+			</div>
+		{{/each}}
 	</div>
+	<script>
+		$(document).ready(function() {
+    	openNav();
+    	closeNav();
+		});
+
+		function openNav() {
+				document.getElementById("avatar").style.width = "250px";
+		};
+		
+		function closeNav() {
+				document.getElementById("avatar").style.width = "0";
+		};	
+	</script>
 </body>
 </html>

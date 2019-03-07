@@ -1,16 +1,26 @@
-var li_elems = [];
 $(document).ready(function() {
     addTask();
     deleteTask();
+    showVal();
+    openNav();
+    closeNav();
 });
+
+function openNav() {
+    document.getElementById("avatar").style.width = "250px";
+};
+  
+function closeNav() {
+    document.getElementById("avatar").style.width = "0";
+};
 
 function addTask() {
     $('#put_task').click(function() {
         var task = $('#input_task').val();
-        if (task === '') {
+        var weight = $('#input_weight').val();
+        if (task === '' || weight === '') {
             return false;
         }
-        li_elems.push(task);
         var li = '<li class="list-group-item">'+ task +
         '<button type="button" class="close" aria-label="Close">' +
         '<span aria-hidden="true">&times;</span>' +
@@ -30,3 +40,9 @@ function deleteTask() {
     })
 }
 
+function showVal() {
+    $('#input_weight').change(function() {
+        var weight = $('#input_weight').val();
+        $('#importance_value').html(weight);
+    })
+}

@@ -1,5 +1,5 @@
-var tasks = require("../tasks.json");
+var data = require("../data.json");
 
 exports.viewProfile = function(req, res) {
-    res.render('profile', tasks);
+    res.render('profile', data);
 };

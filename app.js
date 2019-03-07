@@ -9,16 +9,15 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
-var options = require('./routes/options');
 var profile = require('./routes/profile');
 var history = require('./routes/history');
 var tips = require('./routes/tips');
-var one = require('./routes/option1');
-var two = require('./routes/option2');
 var help = require('./routes/help');
 var login = require('./routes/login');
 var add_type = require('./routes/add_type');
 var add_options = require('./routes/add_options');
+var resetOptions = require('./routes/resetOptions');
+var resetProfile = require('./routes/resetProfile');
 // Example route
 // var user = require('./routes/user');
 
@@ -45,16 +44,15 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/options', options.viewOptions);
 app.get('/profile', profile.viewProfile);
 app.get('/history', history.viewHistory);
 app.get('/tips', tips.viewTips);
-app.get('/option1', one.viewOne);
-app.get('/option2', two.viewTwo);
 app.get('/help', help.viewHelp);
 app.get('/login', login.viewLogin);
 app.get('/add_type', add_type.addType);
 app.get('/add_options', add_options.addOptions);
+app.get('/resetOptions', resetOptions.addResetOptions);
+app.get('/resetProfile', resetProfile.addResetProfile);
 // Example route
 // app.get('/users', user.list);
 

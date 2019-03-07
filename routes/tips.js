@@ -1,3 +1,5 @@
+var data = require("../data.json");
+
 exports.viewTips = function(req, res) {
-    res.render('tips');
+    res.render('tips', data);
 };
