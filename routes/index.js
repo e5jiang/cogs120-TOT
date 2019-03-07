@@ -5,7 +5,7 @@ exports.view = function(req, res) {
     data['viewAlt'] = false;
 };
 
-exports.viewAlt = function(request, response){
-	response.render('index', data);
+exports.viewAlt = function(req, res){
+	res.render('index', data);
 	data['viewAlt'] = true;
 };
