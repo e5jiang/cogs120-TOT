@@ -44,6 +44,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
+app.get('/viewAlt', index.viewAlt);
 app.get('/profile', profile.viewProfile);
 app.get('/history', history.viewHistory);
 app.get('/tips', tips.viewTips);
