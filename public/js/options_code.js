@@ -9,9 +9,9 @@ $(document).ready(function() {
         });
     
         if (empty) {
-            $('.submit_options input').attr('disabled', 'disabled');
+            $('.submit_options button').attr('disabled', 'disabled');
         } else {
-            $('.submit_options input').attr('disabled', false);
+            $('.submit_options button').attr('disabled', false);
         }
     });
     
@@ -62,3 +62,16 @@ function showVals() {
         $('#future_value_two').html(weight);
     })
 }
+
+/*$(window).load(function () {
+    var submit = false;
+    $("#weigh_options").click(function(e) {
+         setTimeout(function(){
+             $('.scale_pic').attr('src', '../images/scale_right.gif')
+             submit = true;
+            $("#addOptionsForm").submit(); // if you want            
+         }, 1000);
+         if(!submit)
+             e.preventDefault();
+    });
+});*/

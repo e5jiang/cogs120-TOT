@@ -43,8 +43,7 @@
 			</div>
 			<div class="top_title" align="center">
 				<div class="app_title">
-					<h1>THIS or THAT</h1>
-					<p></p>
+					<img src="../images/title.png" alt="title" class="img" height="auto" width="200">
 				</div>
 			</div>
 
@@ -58,7 +57,7 @@
 			</div>
 		{{/each}}
 
-		<div class="text_center" align="center">
+		<div class="text_center" align="center" style="padding-top: 10%">
 			<img class = "scale_pic" src="../images/scale.png" alt="scale" class="img" style="width: 100%; height: auto">
 			{{#if viewAlt}}
 			<form id="addOptionsForm" role="form" method="get" action="/add_options">
@@ -163,7 +162,7 @@
 
 				<div class="text-center" style="padding-top: 10px">
 					<div class="submit_options">
-						<input type="submit" class="btn btn-primary" id="weigh_options" disabled="disabled" value="Weigh my options!"/>
+						<button class="btn btn-primary" id="weigh_options" disabled="disabled">Weigh my options!</button>
 					</div>
 				</div>
 			</form>
@@ -268,8 +267,8 @@
 
 				</div>
 
-  			<div class="submit_options">
-					<input type="submit" class="btn btn-primary" id="weigh_options" disabled="disabled" value="Weigh my options!"/>
+  				<div class="submit_options">
+					<button class="btn btn-primary" id="weigh_options" disabled="disabled">Weigh my options!</button>
 				</div>
 			</form>
 			{{/if}}
