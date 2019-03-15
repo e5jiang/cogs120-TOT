@@ -40,20 +40,19 @@
 					<a href="login">Logout</a>
 			</div>
 		{{/each}}
-			{{#each options}}
-				<table class="table">
-					<thead>
-    					<tr>
-      						<th scope="col" style="color:green;">{{option1}}</th>
-      						<th scope="col" style="color:red;">{{option2}}</th>
-    					</tr>
-				 	</thead>
-					<tbody>
-				 	</tbody>
-				</table>
+			{{#each history}}
+				<div class="text-center" style="border: 3px solid black">
+					<h2 style="color:green; margin: auto">{{option1}}</h2>
+					<p>over</p>
+					<h2 style="color:red; margin: auto">{{option2}}</h2>
+				</div>
 			{{/each}}
+			<div>
+				<form id="resetHistoryForm" role="form" method="get" action="/resetHistory" style="float: right; padding-top: 10%">
+					<input type="submit" class="btn btn-dark" id="reset_history" value="Clear History">
+				</form>
+			</div>
 		</div>
-	</div>
 	<script>
 		$(document).ready(function() {
     	openNav();

@@ -15,6 +15,14 @@ $(document).ready(function() {
         }
     });
     
+    $('#save_option1').click(function(){
+        alert("First option saved!");
+    });
+
+    $('#save_option2').click(function(){
+        alert("Second option saved!");
+    });
+
     showVals();
 });
 
@@ -32,46 +40,59 @@ $(".dropdown-menu li a").click(function(){
 });
 
 function showVals() {
+    var weight = $('#work_slider_one').val();
+    $('#work_value_one').html(weight);
     $('#work_slider_one').change(function() {
-        var weight = $('#work_slider_one').val();
+        weight = $('#work_slider_one').val();
         $('#work_value_one').html(weight);
     })
 
+    var weight = $('#work_slider_two').val();
+        $('#work_value_two').html(weight);
     $('#work_slider_two').change(function() {
-        var weight = $('#work_slider_two').val();
+        weight = $('#work_slider_two').val();
         $('#work_value_two').html(weight);
     })
 
+    var weight = $('#quick_slider_one').val();
+    $('#quick_value_one').html(weight);
     $('#quick_slider_one').change(function() {
-        var weight = $('#quick_slider_one').val();
+        weight = $('#quick_slider_one').val();
         $('#quick_value_one').html(weight);
     })
 
+    var weight = $('#quick_slider_two').val();
+        $('#quick_value_two').html(weight);
     $('#quick_slider_two').change(function() {
-        var weight = $('#quick_slider_two').val();
+        weight = $('#quick_slider_two').val();
         $('#quick_value_two').html(weight);
     })
 
+    var weight = $('#future_slider_one').val();
+        $('#future_value_one').html(weight);
     $('#future_slider_one').change(function() {
-        var weight = $('#future_slider_one').val();
+        weight = $('#future_slider_one').val();
         $('#future_value_one').html(weight);
     })
 
+    var weight = $('#future_slider_two').val();
+        $('#future_value_two').html(weight);
     $('#future_slider_two').change(function() {
-        var weight = $('#future_slider_two').val();
+        weight = $('#future_slider_two').val();
         $('#future_value_two').html(weight);
     })
 }
 
-/*$(window).load(function () {
+$(window).load(function () {
     var submit = false;
     $("#weigh_options").click(function(e) {
+        $('#scale_pic').hide();
+        $('#scale_gif').show();
          setTimeout(function(){
-             $('.scale_pic').attr('src', '../images/scale_right.gif')
-             submit = true;
+            submit = true;
             $("#addOptionsForm").submit(); // if you want            
-         }, 1000);
+         }, 5000);
          if(!submit)
-             e.preventDefault();
+            e.preventDefault();
     });
-});*/
+});

@@ -18,6 +18,7 @@ var add_type = require('./routes/add_type');
 var add_options = require('./routes/add_options');
 var resetOptions = require('./routes/resetOptions');
 var resetProfile = require('./routes/resetProfile');
+var resetHistory = require('./routes/resetHistory');
 // Example route
 // var user = require('./routes/user');
 
@@ -54,6 +55,7 @@ app.get('/add_type', add_type.addType);
 app.get('/add_options', add_options.addOptions);
 app.get('/resetOptions', resetOptions.addResetOptions);
 app.get('/resetProfile', resetProfile.addResetProfile);
+app.get('/resetHistory', resetHistory.addResetHistory);
 // Example route
 // app.get('/users', user.list);
 

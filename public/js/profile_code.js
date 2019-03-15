@@ -41,8 +41,10 @@ function deleteTask() {
 }
 
 function showVal() {
+    var weight = $('#input_weight').val();
+    $('#importance_value').html(weight);
     $('#input_weight').change(function() {
-        var weight = $('#input_weight').val();
+        weight = $('#input_weight').val();
         $('#importance_value').html(weight);
     })
 }
